@@ -48,16 +48,39 @@ void moveQueenNovato() {
 }
 
 
-    // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
+    // Movimentação do Cavalo
+   // Função para movimentar o Cavalo em L (2 para baixo, 1 para a esquerda)
+// Utiliza loops aninhados ('for' aninhado com 'while').
+void moveKnightAventureiro() {
+    printf("--- Nível Aventureiro: Movimentação do Cavalo em L (2 Baixo, 1 Esquerda) ---\n");
+    // O movimento em L do cavalo é composto por duas partes:
+    // 1. Duas casas em uma direção (ex: para baixo).
+    // 2. Uma casa em uma direção perpendicular (ex: para a esquerda).
+    // Para cumprir o requisito de loops aninhados, o loop externo 'for' controla
+    // a parte vertical e o loop interno 'while' controla a parte horizontal,
+    // ativado na etapa correta do movimento L.
 
-    // Nível Mestre - Funções Recursivas e Loops Aninhados
-    // Sugestão: Substitua as movimentações das peças por funções recursivas.
-    // Exemplo: Crie uma função recursiva para o movimento do Bispo.
+    // Loop 'for' para os 2 movimentos 'Baixo'.
+    for (int i = 0; i < 2; i++) {
+        printf("Baixo\n"); // Move uma casa para baixo.
 
-    // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
-    // Inclua o uso de continue e break dentro dos loops.
+        // Se for a última iteração do movimento vertical (após o 2º 'Baixo'),
+        // ativamos o loop para o movimento perpendicular ('Esquerda').
+        if (i == 1) { // Após o segundo "Baixo" (índice 1 para 0-indexado)
+            int j = 0;
+            // Loop 'while' para o 1 movimento 'Esquerda'.
+            while (j < 1) { // Este loop executa exatamente uma vez.
+                printf("Esquerda\n"); // Move uma casa para a esquerda.
+                j++;
+            }
+        }
+    }
+    printf("\n");
+}
+
+
+    // Funções Recursivas e Loops Aninhados
+   
 
     return 0;
 }
